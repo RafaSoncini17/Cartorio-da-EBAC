@@ -22,7 +22,7 @@ int cadastro()// Função responsável pelos cadastros
 	fprintf(file, cpf); //fprintf = responsável por salvar o arquivo
 	fclose(file); //Fecha o arquivo
 	
-	file= fopen(arquivo, "a");
+	file= fopen(arquivo, "a");// a=atualizar o cadastro
 	fprintf(file,","); // respnsável por separar os dados
 	fclose(file);
 	
@@ -73,7 +73,7 @@ int consulta()// Função responsável pelas consultas
 	FILE *file;
 	file = fopen(cpf, "r"); // r= Read | Ler
 	
-	if (file==NULL)
+	if (file==NULL)// Se caso for um dado inválido
 	{
 	printf("\nNão foi possível abrir o arquivo! O arquivo não foi localizado! \n\n");
 	}
